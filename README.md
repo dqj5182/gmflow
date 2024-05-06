@@ -80,10 +80,7 @@ All pretrained models can be downloaded from [google drive](https://drive.google
 You can run a trained model on a sequence of images and visualize the results:
 
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py \
---inference_dir demo/sintel_market_1 \
---output_path output/gmflow-norefine-sintel_market_1 \
---resume pretrained/gmflow_sintel-0c07dcb3.pth
+CUDA_VISIBLE_DEVICES=7 python main.py  --inference_dir data/CLOIT/crop_images/67_1_1-612-0  --output_path output/67_1_1-612-0  --resume pretrained/gmflow_sintel-0c07dcb3.pth
 ```
 
 You can also predict bidirectional flow with `--pred_bidir_flow` enabled and use `--fwd_bwd_consistency_check` for forward-backward consistency check. More examples can be found in [scripts/demo.sh](scripts/demo.sh).
